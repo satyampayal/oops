@@ -46,8 +46,20 @@ fraction operator+(fraction f){// binary operator overloading
     return ans;
 }
 
+
+
+void operator++(){// pre-increment // unary opertor overloading
+ numentor=numentor+denomentor;
+ simplify();
+}
+void operator++(int){// post-increment // unary opertor overloading
+numentor=numentor+denomentor;
+simplify();
+
+}
+
 void simplify(){
-    int gcd;
+    int gcd=1;
     for(int i=2;i<min(numentor,denomentor);i++){
         if(numentor%i==0 && denomentor%i==0){
             gcd=i;
@@ -55,9 +67,6 @@ void simplify(){
     }
     numentor/=gcd;
     denomentor/=gcd;
-
-
-
 }
   
 };
@@ -77,6 +86,14 @@ int main(){
    // it automatically one f1 send and second fraction send as arg.// inherently f1 ka data send
     f3= f1+f2; 
    f3.print();
+
+   ++f1;
+   f1.print();
+
+
+// testing post increment and preIncrement operator overloading
+   
+
    
     return 0;
 }
