@@ -1,11 +1,11 @@
 #include<iostream>
 #include<vector>
-using namespace std;
+#include <algorithm>
 
 int main(){
     // cout<<"Enter Array Size";
     // int size; cin>>size;
-   vector<int> v(6);
+   std::vector<int> v;
    v.push_back(1);
    v.push_back(2);
    v.push_back(3);
@@ -15,10 +15,16 @@ int main(){
 //    for(int i=0;i<size;i++){
 //     cin>>v[i];
 //    }
-   cout <<"Enter k value";
-   int k; cin>>k;
+  // std::cout <<"Enter k value ";
+   int k=2; //std::cin>>k;
 
-   //v.reverse(begin(),end());
+   std::reverse(v.begin(),v.end());
+   std::reverse(v.begin(),v.end()+k);
+   std::reverse(v.begin()+k,v.end());
+
+   for(int item:v){
+    std::cout<<item <<" ";
+   }
 
 
     
