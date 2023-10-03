@@ -5,7 +5,7 @@ void rotateArray(vector<vector<int>> &v){
     // transpose Array
     
  for(int i=1;i<v.size();i++){
-        for(int j=0; j<v.size()-1;j++){
+        for(int j=0; j<=i;j++){
             // using inbuilt method
                 //swap(v[i][j],v[j][i]);
 
