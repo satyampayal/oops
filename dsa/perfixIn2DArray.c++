@@ -42,10 +42,21 @@ int main(){
         cout<<endl;
     }
      int l1,r1,l2,r2;
+     cout<<"Enter l1 r1 l2 r2";
     cin>>l1>>r1>>l2>>r2;
-    int row1sum=v[l1][r2]-v[l1][l1-1];
-    int row2sum=v[l2][r2]-v[l2][l1-1];
-    cout<<row1sum+row2sum;
+    int row1sum;
+    int row2sum;
+    if(l1!=0){
+         row1sum=v[l1][r2]-v[l1][l1-1];
+     row2sum=v[l2][r2]-v[l2][l1-1];
+    cout<<"Sum"<<row1sum+row2sum;
+    }
+    else{
+            row1sum=v[0][r2];
+     row2sum=v[l2][r2];
+    cout<<"Sum"<<row1sum+row2sum;
+    }
+   
 
     
     return 0;
