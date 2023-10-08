@@ -18,9 +18,9 @@ int main(){
         for(int j=0;j<c;j++){
            if(v[i][j]==1){
             int oneCount=c-j;
-            if(oneCount>maxones){
-                maxones=oneCount;
-                idx=i;
+            if(oneCount>maxones){// 3> -182
+                maxones=oneCount;// mxOnes=3;
+                idx=i; // row=0;
             }
             break;
            }
