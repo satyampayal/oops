@@ -4,13 +4,13 @@ using namespace std;
 int kthSmaallest(int arr[],int k,int n){
      priority_queue<int> pq;// by default make max heap
      for(int i=0;i<k;i++){
-         pq.push(-arr[i]);
+         pq.push(arr[i]);
          cout<<pq.top()<<" ";
      }
      for(int i=k;i<n;i++){
-        if(pq.top()>(-arr[i])){
+        if(arr[i]<pq.top()){
               pq.pop();
-              pq.push(-arr[i]);
+              pq.push(arr[i]);
          cout<<pq.top()<<" ";
 
         }
