@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void alternate(int*  arr,int n){
+void alternate1(int*  arr,int n){
    int i=0;
    while(i!=n-1){
     int lp=i;
@@ -17,6 +17,24 @@ void alternate(int*  arr,int n){
    }
 
 }
+void alternate2(int arr[],int n){
+    int min_idx=0;
+    int max_idx=n-1;
+    int max=arr[n-1] +1;
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+        arr[i]=(arr[max_idx]%max)*max + arr[i];
+        max_idx--;
+        }
+        else{
+        arr[i]=(arr[min_idx]%max)*max + arr[i];
+        min_idx++;
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr[i]/max<<" ";
+    }
+}
 
 int main(){
      int n;
@@ -25,9 +43,10 @@ int main(){
    for(int i=0;i<n;i++){
     cin>>arr[i];
    }
-   alternate(arr,n);
-   for(int i:arr){
-    cout<<i<<" ";
-   }
+alternate2(arr,n);
+  // alternate1(arr,n);
+  // for(int i:arr){
+  //  cout<<i<<" ";
+  // }
     return 0;
 }
