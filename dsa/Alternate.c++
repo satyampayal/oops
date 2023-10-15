@@ -43,10 +43,10 @@ int main(){
    for(int i=0;i<n;i++){
     cin>>arr[i];
    }
-alternate2(arr,n);
-  // alternate1(arr,n);
-  // for(int i:arr){
-  //  cout<<i<<" ";
-  // }
+//alternate2(arr,n);
+   alternate1(arr,n);
+   for(int i:arr){
+    cout<<i<<" ";
+   }
     return 0;
 }
