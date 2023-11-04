@@ -15,6 +15,7 @@ int buyStock(int arr[],int n){
         }
         last--;
     }
+    
     for(int i=0;i<n-1;i++){
         if(auxArray[i+1]-arr[i]>maxProfit){
             maxProfit=auxArray[0]-arr[i];
